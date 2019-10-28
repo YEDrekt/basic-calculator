@@ -9,14 +9,13 @@ operatorlookup = {
 
 operation = input("İşlemi giriniz: ")
 
+result = 0
+
 elements = []
 
-if " " in operation:
-    elements = operation.split(" ")
-else:
-    elements = operation
-
-result = 0
+for z in operation:
+    if z is not " ":
+        elements.append(z)
 
 for x in range(0, len(elements), 2):
     y = int(elements[x])
